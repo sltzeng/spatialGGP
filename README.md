@@ -1,43 +1,29 @@
 # Monte Carlo Comparison of Scalable Approximations for Generalized Gaussian Processes in Geostatistical Count Data
 
-This repository contains the publicly available R code used for the simulation study in the paper:
-```
-Monte Carlo Comparison of Scalable Approximations for Generalized Gaussian Processes in Geostatistical Count Data
-```
+This repository contains the R code for the simulation study presented in the associated paper.
 
-The code provides a benchmark comparison of several scalable methods for fitting generalized Gaussian process models to geostatistical count data, including:
-
--spaMM
--INLA
--glmmTMB
--spStack
--ensGP
-
-The simulation code is provided to facilitate the reproducibility of the Monte Carlo experiments presented in the paper and to provide a benchmark framework for comparing the statistical and computational performance of these approaches.
+The code provides a benchmark comparison of several scalable methods for fitting generalized Gaussian process models to geostatistical count data. The simulation code is provided to facilitate the reproducibility of the Monte Carlo experiments presented in the paper and to provide a benchmark framework for comparing the statistical and computational performance of these approaches.
 
 ## Requirements
 **Please make sure that your R version is:**
 
-``` 
-R >= 4.4.3
-```
+> R >= 4.4.3
+
 
 **The simulation code relies on the following R packages:**
 
-```
-spaMM
-INLA
-sp
-sf
-geoR
-MASS
-fields
-glmmTMB
-fmesher
-inlabru
-spStack
-callr
-```
+> spaMM
+> INLA
+> sp
+> sf
+> geoR
+> MASS
+> fields
+> glmmTMB
+> fmesher
+> inlabru
+> spStack
+> callr
 
 All packages other than INLA can be installed through the usual R package installation process:
 
@@ -69,7 +55,7 @@ The simulation code compares the following approaches:
 | INLA | INLA |
 | glmmTMB | glmmTMB |
 | spStack | spStack |
-| ensGP | implemented in the benchmark code |
+| ensGP | implemented in-house |
 
 The methods are evaluated under the simulation settings considered in the paper, allowing their statistical and computational performance to be compared within a common Monte Carlo framework.
 
@@ -87,31 +73,27 @@ The correspondence is as follows:
 
 | Paper notation | Code notation | Description |
 |---|---|---|
-| $s$ | `s = (x, y)` | Spatial location |
+| $\mathbf{s}$ | `s = (x, y)` | Spatial location |
 | $s_1, s_2$ | `x, y` | Two spatial coordinates |
 | $y$ | `z` | Observed count |
 | $z$ | `latent field` | Latent spatial process |
 
 In the paper:
 
-- $s$ denotes the spatial location;
+- $\mathbf{s}$ denotes the spatial location;
 - $y$ denotes the observed count;
 - $z$ denotes the latent spatial field.
 
 In the code:
 
-- s = (x, y) denotes the spatial location, where x and y are the two spatial coordinates corresponding to $s_1$ and $s_2$ in the paper;
-- z denotes the observed count, corresponding to $y$ in the paper.
+- `s = (x, y)` denotes the spatial location, where x and y are the two spatial coordinates corresponding to $s_1$ and $s_2$ in the paper;
+- `z` denotes the observed count, corresponding to $y$ in the paper.
 - This difference in notation should be taken into account when relating the simulation code to the mathematical notation in the paper.
 
 ## Citation
-If you use this code in your research, please cite the associated paper:
-
-```
-Monte Carlo Comparison of Scalable Approximations for Generalized Gaussian Processes in Geostatistical Count Data
-```
-
-A full citation will be provided here once the paper is published.
+> If you use this code in your research, please cite the associated paper.
+> 
+> ShengLi Tzeng and Meng-Ting Huang. (2026+) Monte Carlo comparison of scalable approximations for generalized Gaussian processes in geostatistical count data. Journal of the Chinese Statistical Association. Accepted.
 
 ## Disclaimer
 This repository contains research code intended primarily for simulation, benchmarking, and reproducibility purposes. The code has not necessarily been optimized for general-purpose use outside the simulation settings considered in the paper.
