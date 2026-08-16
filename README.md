@@ -12,17 +12,17 @@ The code provides a benchmark comparison of several scalable methods for fitting
 
 **The simulation code relies on the following R packages:**
 
-> spaMM
-> INLA
-> sp
-> sf
-> geoR
-> MASS
-> fields
-> glmmTMB
-> fmesher
-> inlabru
-> spStack
+> spaMM,
+> INLA,
+> sp,
+> sf,
+> geoR,
+> MASS,
+> fields,
+> glmmTMB,
+> fmesher,
+> inlabru,
+> spStack,
 > callr
 
 All packages other than INLA can be installed through the usual R package installation process:
@@ -42,7 +42,7 @@ install.packages(c(
 ))
 ```
 
-For installation instructions for INLA, please refer to the official INLA website:
+For installation instructions for INLA, please refer to the official INLA website: <br>
 [https://www.r-inla.org/download/index.html](https://www.r-inla.org/download/index.html)
 
 ## Methods Compared
